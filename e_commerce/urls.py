@@ -17,9 +17,13 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
-from e_commerce.views import home_page
+from e_commerce.views import home_view, about_page, contact_page, login_page, register_page
 
 urlpatterns = [
-    path('',home_page),
+    path('',home_view),
+    path('about/', about_page),
+    path('contact/', contact_page),
+    path('login/', login_page),
+    path('register/', register_page),
     path('admin/', admin.site.urls),
 ]
